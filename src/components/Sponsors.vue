@@ -17,34 +17,78 @@ interface sponsorsProps {
   name: string;
 }
 
-const sponsors: sponsorsProps[] = [
+const sponsors = [
   {
-    icon: "crown",
-    name: "Acmebrand",
+    icon: "tg_ewallet.png",
+    name: "TNG",
   },
   {
-    icon: "vegan",
-    name: "Acmelogo",
+    icon: "tg_duitnow.png",
+    name: "DuitNow",
   },
   {
-    icon: "ghost",
-    name: "Acmesponsor",
+    icon: "tg_ffx.png",
+    name: "ABBPAY",
   },
   {
-    icon: "puzzle",
-    name: "Acmeipsum",
+    icon: "tg_ffx.png",
+    name: "ABMB",
   },
   {
-    icon: "squirrel",
-    name: "Acme",
+    icon: "tg_ffx.png",
+    name: "ARGO",
   },
   {
-    icon: "cookie",
-    name: "Accmee",
+    icon: "tg_ffx.png",
+    name: "BIMB",
   },
   {
-    icon: "drama",
-    name: "Acmetech",
+    icon: "tg_ffx.png",
+    name: "BSN",
+  },
+  {
+    icon: "tg_ffx.png",
+    name: "CIMB",
+  },
+  {
+    icon: "tg_ffx.png",
+    name: "HLBB",
+  },
+  {
+    icon: "tg_ffx.png",
+    name: "HSBC",
+  },
+  {
+    icon: "tg_ffx.png",
+    name: "KFH",
+  },
+  {
+    icon: "tg_ffx.png",
+    name: "MB2U",
+  },
+  {
+    icon: "tg_ffx.png",
+    name: "BMMB",
+  },
+  {
+    icon: "tg_ffx.png",
+    name: "OCBC",
+  },
+  {
+    icon: "tg_ffx.png",
+    name: "PBB",
+  },
+  {
+    icon: "tg_ffx.png",
+    name: "RHB",
+  },
+  {
+    icon: "tg_ffx.png",
+    name: "SCB",
+  },
+  {
+    icon: "tg_ffx.png",
+    name: "UOB",
   },
 ];
 
@@ -69,15 +113,12 @@ const iconMap: Record<
 </script>
 
 <template>
-  <section
-    id="sponsors"
-    class="max-w-[75%] mx-auto pb-24 sm:pb-32"
-  >
-    <h2 class="text-lg md:text-xl text-center mb-6">Our Platinum Sponsors</h2>
+  <section id="sponsors" class="max-w-[75%] mx-auto pb-24 sm:pb-32">
+    <h2 class="text-lg md:text-xl text-center mb-6">Our Sponsors</h2>
 
     <div class="mx-auto">
       <Marquee
-        class="gap-[3rem]"
+        class="gap-[3rem] [--duration:20s]"
         :pauseOnHover="true"
         :fade="true"
         innerClassName="gap-[3rem]"
@@ -85,15 +126,14 @@ const iconMap: Record<
         <div
           v-for="{ icon, name } in sponsors"
           :key="name"
+          class="flex items-center text-xl md:text-2xl font-medium"
         >
-          <div class="flex items-center text-xl md:text-2xl font-medium">
-            <component
-              :is="iconMap[icon]"
-              class="mr-2"
-              stroke-width="3"
-            />
-            {{ name }}
-          </div>
+          <img
+            :src="`/${icon}`"
+            :alt="name"
+            class="w-12 h-12 mr-1 object-contain"
+          />
+          <span>{{ name }}</span>
         </div>
       </Marquee>
     </div>
