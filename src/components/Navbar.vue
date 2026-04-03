@@ -189,13 +189,7 @@ const isOpen = ref<boolean>(false);
       <ToggleTheme />
 
       <Button as-child size="sm" variant="ghost" aria-label="View on GitHub">
-        <a
-          aria-label="View on GitHub"
-          href="https://github.com/leoMirandaa/shadcn-vue-landing-page.git"
-          target="_blank"
-        >
-          <GithubIcon class="size-5" />
-        </a>
+        <img src="/login.png"  class="w-22 h-22" />
       </Button>
     </div>
   </header>

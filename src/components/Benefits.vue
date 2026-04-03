@@ -18,22 +18,22 @@ interface BenefitsProps {
 
 const benefitList: BenefitsProps[] = [
   {
-    icon: "blocks",
-    title: "Build Brand Trust",
+    icon: "guardian_icon.png",
+    title: "Sentinel of your Revenue",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "We treat your capital with the vigilance it deserves. Our proprietary risk intelligence anticipates threats before they manifest, ensuring your profit margins remain uncompromised in a volatile global market.",
   },
   {
-    icon: "lineChart",
-    title: "More Leads",
+    icon: "global_icon.png",
+    title: "Catalyize Global Market Access",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "Eliminate the friction of cross-border commerce. Our unified payment infrastructure empowers your brand to resonate in every local market, turning global complexity into seamless growth opportunities.",
   },
   {
-    icon: "wallet",
-    title: "Higher Conversions",
+    icon: "money.png",
+    title: "  Amplifying Revenue Velocity",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "Empower your business to capture every potential cent. Our high-performance gateway is engineered to reduce friction, ensuring a seamless path from intent to settlement for global customers.",
   },
   {
     icon: "sparkle",
@@ -62,19 +62,20 @@ const iconMap: Record<
 </script>
 
 <template>
-  <section
-    id="benefits"
-    class="container py-24 sm:py-32"
-  >
+  <section id="Security and Trust" class="container py-24 sm:py-32">
     <div class="grid lg:grid-cols-2 place-items-center lg:gap-24">
       <div>
-        <h2 class="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
+        <h2 class="text-lg text-primary mb-2 tracking-wider">
+          Security and Trust
+        </h2>
 
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
           Engineered for Infinite Scale
         </h2>
         <p class="text-xl text-muted-foreground mb-8">
-        From lightning-fast authoriztionto multi-layered fraud prevention, we redefine the architecture of global payments with uncompromising speed.
+          From lightning-fast authoriztionto multi-layered fraud prevention, we
+          redefine the architecture of global payments with uncompromising
+          speed.
         </p>
       </div>
 
@@ -86,10 +87,7 @@ const iconMap: Record<
         >
           <CardHeader>
             <div class="flex justify-between">
-              <component
-                class="size-8 mb-6 text-primary"
-                :is="iconMap[icon]"
-              />
+              <img :src="`/${icon}`" class="w-20 h-20 mb-6" />
 
               <span
                 class="text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/30"
