@@ -9,26 +9,30 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import { Check } from "lucide-vue-next";
 
 enum PopularPlan {
   NO = 0,
   YES = 1,
 }
 
+interface PlanBenefit {
+  title: string;
+  description?: string;
+}
+
 interface PlanProps {
   title: string;
   popular: PopularPlan;
-  price: number;
+  price: string;
   description: string;
   buttonText: string;
-  benefitList: string[];
+  benefitList: PlanBenefit[];
 }
 
 const plans: PlanProps[] = [
   {
     title: "Our Payment Gateway",
-    popular: 1,
+    popular: PopularPlan.YES,
     price: "Payment Rate",
     description: "Free to contact us for more information.",
     buttonText: "Contact Us",
@@ -44,18 +48,6 @@ const plans: PlanProps[] = [
     ],
   },
 ];
-
-const shareMessage = encodeURIComponent(
-  "I'm interested to join TG Payment Gateway",
-);
-
-const whatsapp = {
-  url: `https://wa.me/60177877033?text=${shareMessage}`,
-};
-
-const handleWhatsappMessage = () => {
-  window.open(whatsapp.url, "_blank");
-};
 </script>
 
 <template>
@@ -106,12 +98,18 @@ const handleWhatsappMessage = () => {
 
         <CardContent class="flex">
           <div class="space-y-4">
-            <span v-for="benefit in benefitList" :key="benefit" class="flex">
-              <div class="flex-column">
+            <span
+              v-for="(benefit, index) in benefitList"
+              :key="`${benefit.title}-${index}`"
+              class="flex"
+            >
+              <div class="flex flex-col">
                 <h3 class="font-bold">
-                  {{ benefitList.indexOf(benefit) + 1 }}. {{ benefit.title }}
+                  {{ index + 1 }}. {{ benefit.title }}
                 </h3>
-                <h3 class="font-medium">{{ benefit.description }}</h3>
+                <h3 v-if="benefit.description" class="font-medium">
+                  {{ benefit.description }}
+                </h3>
               </div>
             </span>
           </div>

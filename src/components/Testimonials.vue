@@ -1,26 +1,30 @@
 <script setup lang="ts">
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star } from "lucide-vue-next";
 
-const benefitList: BenefitProps[] = [
+interface BenefitItem {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const benefitList: BenefitItem[] = [
   {
     title: "Unrivaled Performance",
     description:
       "Our intelligent routing technology ensures maximum transaction success rates with millisecond latency. We turn every payment attempt into a successful settlement.",
-    image: "point.png",
+    image: "/point.png",
   },
   {
     title: "Gold-Standard Security",
     description:
       "We believe in high-tech supported by high-touch. Our elite technical team is available golden security services, providing bespoke solutions tailored specifically to your business needs.",
-    image: "point.png",
+    image: "/point.png",
   },
   {
     title: "Dedicated Support",
     description:
       "TG Payment Gateway is trusted by global enterprise leaders to provide them with the best possible service and support.",
-    image: "point.png",
+    image: "/point.png",
   },
 ];
 </script>
@@ -62,7 +66,7 @@ const benefitList: BenefitProps[] = [
         <img
           :src="image"
           :alt="`Image describing ${title} `"
-          className="w-[150px]  md:w-[250px] lg:w-[300px] mx-auto -scale-x-100 "
+          class="w-[150px] md:w-[250px] lg:w-[300px] mx-auto -scale-x-100"
         />
         <div
           :class="[

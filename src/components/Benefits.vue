@@ -1,15 +1,6 @@
 <script setup lang="ts">
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-import {
-  Sparkle,
-  Tag,
-  Paintbrush,
-  Blocks,
-  LineChart,
-  Wallet,
-} from "lucide-vue-next";
-
 interface BenefitsProps {
   icon: string;
   title: string;
@@ -43,22 +34,6 @@ const benefitList: BenefitsProps[] = [
   },
 ];
 
-const iconMap: Record<
-  string,
-  | typeof Sparkle
-  | typeof Tag
-  | typeof Paintbrush
-  | typeof Blocks
-  | typeof LineChart
-  | typeof Wallet
-> = {
-  sparkle: Sparkle,
-  tag: Tag,
-  paintbrush: Paintbrush,
-  blocks: Blocks,
-  lineChart: LineChart,
-  wallet: Wallet,
-};
 </script>
 
 <template>

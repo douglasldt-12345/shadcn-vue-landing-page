@@ -1,17 +1,6 @@
 <script setup lang="ts">
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-import {
-  Paintbrush,
-  MessageCircle,
-  TabletSmartphone,
-  BadgeCheck,
-  Goal,
-  PictureInPicture,
-  MousePointerClick,
-  Newspaper,
-} from "lucide-vue-next";
-
 interface FeaturesProps {
   icon: string;
   title: string;
@@ -57,26 +46,6 @@ const featureList: FeaturesProps[] = [
   },
 ];
 
-const iconMap: Record<
-  string,
-  | typeof TabletSmartphone
-  | typeof BadgeCheck
-  | typeof Goal
-  | typeof PictureInPicture
-  | typeof Paintbrush
-  | typeof MousePointerClick
-  | typeof MessageCircle
-  | typeof Newspaper
-> = {
-  tabletSmartphone: TabletSmartphone,
-  badgeCheck: BadgeCheck,
-  goal: Goal,
-  pictureInPicture: PictureInPicture,
-  paintbrush: Paintbrush,
-  mousePointerClick: MousePointerClick,
-  messageCircle: MessageCircle,
-  newspaper: Newspaper,
-};
 </script>
 
 <template>
