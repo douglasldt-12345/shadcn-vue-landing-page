@@ -46,10 +46,7 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <section
-    id="contact"
-    class="container py-24 sm:py-32"
-  >
+  <section id="contact" class="container py-24 sm:py-32">
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div>
         <div class="mb-4">
@@ -58,15 +55,16 @@ const handleSubmit = () => {
           <h2 class="text-3xl md:text-4xl font-bold">Connect With Us</h2>
         </div>
         <p class="mb-8 text-muted-foreground lg:w-5/6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-          ipsam sint enim exercitationem ex autem corrupti quas tenetur
+          Explore how our bespoke financial solutions can optimize your global
+          transaction landscape. Our dedicated team is ready to engineer your
+          growth.
         </p>
 
         <div class="flex flex-col gap-4">
           <div>
             <div class="flex gap-2 mb-1">
               <Building2 />
-              <div class="font-bold">Find Us</div>
+              <div class="font-bold">global Headquarters</div>
             </div>
 
             <div>742 Evergreen Terrace, Springfield, IL 62704</div>
@@ -75,7 +73,7 @@ const handleSubmit = () => {
           <div>
             <div class="flex gap-2 mb-1">
               <Phone />
-              <div class="font-bold">Call Us</div>
+              <div class="font-bold">Priority Support</div>
             </div>
 
             <div>+1 (619) 123-4567</div>
@@ -84,7 +82,7 @@ const handleSubmit = () => {
           <div>
             <div class="flex gap-2 mb-1">
               <Mail />
-              <div class="font-bold">Mail Us</div>
+              <div class="font-bold">Institutional Inquirities</div>
             </div>
 
             <div>leomirandadev@gmail.com</div>
@@ -93,7 +91,7 @@ const handleSubmit = () => {
           <div>
             <div class="flex gap-2">
               <Clock />
-              <div class="font-bold">Visit Us</div>
+              <div class="font-bold">Business Hours</div>
             </div>
 
             <div>
@@ -108,10 +106,7 @@ const handleSubmit = () => {
       <Card class="bg-muted/60 dark:bg-card">
         <CardHeader class="text-primary text-2xl"> </CardHeader>
         <CardContent>
-          <form
-            @submit.prevent="handleSubmit"
-            class="grid gap-4"
-          >
+          <form @submit.prevent="handleSubmit" class="grid gap-4">
             <div class="flex flex-col md:flex-row gap-8">
               <div class="flex flex-col w-full gap-1.5">
                 <Label for="first-name">First Name</Label>
@@ -154,15 +149,19 @@ const handleSubmit = () => {
                 <SelectContent>
                   <SelectGroup>
                     <SelectItem value="Web Development">
-                      Web Development
+                      Global Settlement Solutions
                     </SelectItem>
-                    <SelectItem value="Mobile Development">
+                    <SelectItem value="Merchant Account Inquiry">
                       Mobile Development
                     </SelectItem>
-                    <SelectItem value="Figma Design"> Figma Design </SelectItem>
-                    <SelectItem value="REST API "> REST API </SelectItem>
-                    <SelectItem value="FullStack Project">
-                      FullStack Project
+                    <SelectItem value="Risk & Compliance Consulting">
+                      Risk & Compliance Consulting
+                    </SelectItem>
+                    <SelectItem value="API Integration & Sandbox">
+                      API Integration & Sandbox
+                    </SelectItem>
+                    <SelectItem value=" Enterprise Strategic Partnership">
+                      Enterprise Strategic Partnership
                     </SelectItem>
                   </SelectGroup>
                 </SelectContent>
@@ -179,10 +178,7 @@ const handleSubmit = () => {
               />
             </div>
 
-            <Alert
-              v-if="invalidInputForm"
-              variant="destructive"
-            >
+            <Alert v-if="invalidInputForm" variant="destructive">
               <AlertCircle class="w-4 h-4" />
               <AlertTitle>Error</AlertTitle>
               <AlertDescription>

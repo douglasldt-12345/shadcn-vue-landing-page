@@ -36,10 +36,10 @@ const benefitList: BenefitsProps[] = [
       "Empower your business to capture every potential cent. Our high-performance gateway is engineered to reduce friction, ensuring a seamless path from intent to settlement for global customers.",
   },
   {
-    icon: "sparkle",
-    title: "Test Marketing Ideas",
+    icon: "compass.png",
+    title: "Strategic & Growth-Oriented",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "We specialize in deploying data-backed marketing frameworks designed to scale payment ecosystems. By leveraging rigorous A/B testing and consumer behavior analysis, we optimize every touchpoint of the merchant journey to drive sustainable acquisition and long-term retention.",
   },
 ];
 

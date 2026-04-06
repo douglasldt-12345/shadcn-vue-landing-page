@@ -12,40 +12,38 @@ interface HowItWorksProps {
 const HowItWorksList: HowItWorksProps[] = [
   {
     badgeTitle: "Contribute",
-    title: "Make a Difference with Every Contribution",
+    title: "Empower Global Commerce with Every Transaction",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, quasi sint reiciendis quidem iure.",
-    image: "roboto.png",
+      "We redefine the standard of financial liquidity. By integrating our sophisticated gateway, your business becomes part of a seamless economic network designed for high-velocity growth and absolute fiscal reliability.",
+    image: "empower.png",
   },
   {
     badgeTitle: "Discover",
-    title: "Create an Impact with Every Choice",
+    title: "Precision Excellence in Every Decision",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, sint reiciendis quidem iure veritatis optio facere tenetur.",
-    image: "runner.png",
+      "Beyond simple processing, we provide the intelligence needed to optimize your revenue streams. Discover a partnership that prioritizes strategic scalability and long-term financial health over short-term gains.",
+    image: "precision.png",
   },
   {
     badgeTitle: "Innovate",
-    title: "Make Every Action Count",
+    title: "Driving the Future of Digital Settlements",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, odit similique quasi sint.",
-    image: "pacheco.png",
+      "Innovation is embedded in our architecture. From agile payment methods to instant cross-border clearing, we continuously evolve our infrastructure to ensure your business stays ahead of a rapidly shifting financial landscape.",
+    image: "settlement.png",
+
   },
   {
     badgeTitle: "Collaborate",
-    title: "Tackle this challenge together",
+    title: "Synergistic Growth Through Strategic Alliance",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, quasi sint reiciendis quidem iure.",
-    image: "gamestation.png",
+      "Success in the global market is a collaborative venture. We align our advanced technology with your unique business objectives, creating a powerful synergy that transforms traditional barriers into competitive advantages.",
+    image: "growth.png",
   },
 ];
 </script>
 
 <template>
-  <section
-    id="features"
-    class="container py-24 sm:py-32"
-  >
+  <section id="features" class="container py-24 sm:py-32">
     <div class="text-center mb-8">
       <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
         How It Works

@@ -27,70 +27,56 @@ interface PlanProps {
 
 const plans: PlanProps[] = [
   {
-    title: "Free",
-    popular: 0,
-    price: 0,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
-    benefitList: [
-      "1 team member",
-      "1 GB storage",
-      "Upto 2 pages",
-      "Community support",
-      "AI assistance",
-    ],
-  },
-  {
-    title: "Premium",
+    title: "Our Payment Gateway",
     popular: 1,
-    price: 45,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get starterd",
+    price: "Payment Rate",
+    description: "Free to contact us for more information.",
+    buttonText: "Contact Us",
     benefitList: [
-      "4 team member",
-      "8 GB storage",
-      "Upto 6 pages",
-      "Priority support",
-      "AI assistance",
-    ],
-  },
-  {
-    title: "Enterprise",
-    popular: 0,
-    price: 120,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
-    benefitList: [
-      "10 team member",
-      "20 GB storage",
-      "Upto 10 pages",
-      "Phone & email support",
-      "AI assistance",
+      { title: " Fpx", description: "-Up to 17 banks" },
+      { title: " DuitNow" },
+      {
+        title: " E wallet",
+        description: "-Up to 5 Channels",
+      },
+      { title: " Pay out FPX" },
+      { title: " Payout Big" },
     ],
   },
 ];
+
+const shareMessage = encodeURIComponent(
+  "I'm interested to join TG Payment Gateway",
+);
+
+const whatsapp = {
+  url: `https://wa.me/60177877033?text=${shareMessage}`,
+};
+
+const handleWhatsappMessage = () => {
+  window.open(whatsapp.url, "_blank");
+};
 </script>
 
 <template>
   <section class="container py-24 sm:py-32">
     <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
-      Pricing
+      Premium Serve
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      Get unlimitted access
+      Connect With Us
     </h2>
 
     <h3
       class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14"
     >
-      Lorem ipsum dolor sit amet consectetur adipisicing reiciendis.
+      Explore how our bespoke financial solutions can optimize your global
+      transaction landscape. Our dedicated team is ready to engineer your
+      growth.
     </h3>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
+    <div class="flex justify-center items-center">
       <Card
         v-for="{
           title,
@@ -114,20 +100,19 @@ const plans: PlanProps[] = [
           <CardDescription class="pb-4">{{ description }}</CardDescription>
 
           <div>
-            <span class="text-3xl font-bold">${{ price }}</span>
-            <span class="text-muted-foreground"> /month</span>
+            <span class="text-3xl font-bold">{{ price }}</span>
           </div>
         </CardHeader>
 
         <CardContent class="flex">
           <div class="space-y-4">
-            <span
-              v-for="benefit in benefitList"
-              :key="benefit"
-              class="flex"
-            >
-              <Check class="text-primary mr-2" />
-              <h3>{{ benefit }}</h3>
+            <span v-for="benefit in benefitList" :key="benefit" class="flex">
+              <div class="flex-column">
+                <h3 class="font-bold">
+                  {{ benefitList.indexOf(benefit) + 1 }}. {{ benefit.title }}
+                </h3>
+                <h3 class="font-medium">{{ benefit.description }}</h3>
+              </div>
             </span>
           </div>
         </CardContent>
@@ -136,6 +121,7 @@ const plans: PlanProps[] = [
           <Button
             :variant="popular === PopularPlan?.NO ? 'secondary' : 'default'"
             class="w-full"
+            onclick="window.location.href = 'https://wa.me/qr/YJSBMHJW7VVOK1'"
           >
             {{ buttonText }}
           </Button>
