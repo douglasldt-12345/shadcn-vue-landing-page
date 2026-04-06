@@ -42,16 +42,8 @@ const routeList: RouteProps[] = [
     label: "Testimonials",
   },
   {
-    href: "#team",
-    label: "Team",
-  },
-  {
-    href: "#contact",
-    label: "Contact",
-  },
-  {
-    href: "#faq",
-    label: "FAQ",
+    href: "#features",
+    label: "Features",
   },
 ];
 
@@ -80,7 +72,7 @@ const isOpen = ref<boolean>(false);
     :class="{
       'shadow-light': mode === 'light',
       'shadow-dark': mode === 'dark',
-      'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto stickyborder  z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
+      'relative w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto stickyborder z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
     }"
   >
     <a href="/" class="font-bold text-lg flex items-center">
@@ -108,7 +100,7 @@ const isOpen = ref<boolean>(false);
               </SheetTitle>
             </SheetHeader>
 
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col justify-center items-center gap-2">
               <Button
                 v-for="{ href, label } in routeList"
                 :key="label"
@@ -132,38 +124,10 @@ const isOpen = ref<boolean>(false);
       </Sheet>
     </div>
 
-    <!-- Desktop -->
-    <NavigationMenu class="hidden lg:block">
+    <NavigationMenu
+      class="hidden lg:flex absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2"
+    >
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger class="bg-card text-base">
-            Features
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <div class="grid w-[600px] grid-cols-2 gap-5 p-4">
-              <img
-                src="https://www.radix-vue.com/logo.svg"
-                alt="Beach"
-                class="h-full w-full rounded-md object-cover"
-              />
-              <ul class="flex flex-col gap-2">
-                <li
-                  v-for="{ title, description } in featureList"
-                  :key="title"
-                  class="rounded-md p-3 text-sm hover:bg-muted"
-                >
-                  <p class="mb-1 font-semibold leading-none text-foreground">
-                    {{ title }}
-                  </p>
-                  <p class="line-clamp-2 text-muted-foreground">
-                    {{ description }}
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
             <Button
@@ -182,13 +146,18 @@ const isOpen = ref<boolean>(false);
       </NavigationMenuList>
     </NavigationMenu>
 
-    <div class="hidden lg:flex">
-      <ToggleTheme />
-
-      <Button as-child size="sm" variant="ghost" aria-label="View on GitHub">
-        <img src="/login.png"  class="w-22 h-22" />
-      </Button>
-    </div>
+    <a
+      href="#pricing"
+      class="hidden lg:flex items-center justify-center gap-2 cursor-pointer"
+    >
+      <img src="/phone2.png" class="w-10 h-10" alt="" />
+      <span class="contact-now-gradient-border rounded-full">
+        <span class="contact-now-gradient-spin" aria-hidden="true" />
+        <span class="contact-now-gradient-inner text-sm font-bold rounded-full">
+          Contact Now
+        </span>
+      </span>
+    </a>
   </header>
 </template>
 
@@ -199,5 +168,48 @@ const isOpen = ref<boolean>(false);
 
 .shadow-dark {
   box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.141);
+}
+
+.contact-now-gradient-border {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.contact-now-gradient-spin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 250%;
+  height: 250%;
+  background: conic-gradient(
+    from 0deg,
+    #000000 0deg,
+    #000000 90deg,
+    #ffbd5a 180deg,
+    #000000 360deg
+  );
+  animation: contact-now-border-spin 3s linear infinite;
+}
+
+.contact-now-gradient-inner {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 9999px;
+  background: hsl(var(--card));
+}
+
+@keyframes contact-now-border-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 </style>
