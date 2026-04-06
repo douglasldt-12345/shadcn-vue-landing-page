@@ -72,12 +72,5 @@ const FAQList: FAQProps[] = [
         <AccordionContent>{{ answer }}</AccordionContent>
       </AccordionItem>
     </Accordion>
-
-    <h3 class="font-medium mt-4">
-      Still have questions?
-      <a href="#" class="text-muted-foreground">
-        <a href="#" class="underline">Contact us</a>
-      </a>
-    </h3>
   </section>
 </template>

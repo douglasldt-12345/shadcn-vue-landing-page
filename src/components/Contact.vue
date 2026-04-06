@@ -185,8 +185,6 @@ const handleSubmit = () => {
                 There is an error in the form. Please check your input.
               </AlertDescription>
             </Alert>
-
-            <Button class="mt-4">Send message</Button>
           </form>
         </CardContent>
 

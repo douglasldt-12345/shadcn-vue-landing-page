@@ -51,7 +51,7 @@ const plans: PlanProps[] = [
 </script>
 
 <template>
-  <section class="container py-24 sm:py-32">
+  <section id="pricing" class="container py-24 sm:py-32">
     <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
       Premium Serve
     </h2>
@@ -117,7 +117,7 @@ const plans: PlanProps[] = [
 
         <CardFooter>
           <Button
-            :variant="popular === PopularPlan?.NO ? 'secondary' : 'default'"
+            name="contact-now"
             class="w-full"
             onclick="window.location.href = 'https://wa.me/qr/YJSBMHJW7VVOK1'"
           >

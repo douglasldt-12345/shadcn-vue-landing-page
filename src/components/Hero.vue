@@ -35,23 +35,6 @@ import { ArrowRight } from "lucide-vue-next";
           settlements for enterprises that demand uncompromising rialibility and
           borderless growth
         </p>
-
-        <div class="space-y-4 md:space-y-0 md:space-x-4">
-          <Button class="w-5/6 md:w-1/4 font-bold group/arrow">
-            Get Started
-            <ArrowRight
-              class="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform"
-            />
-          </Button>
-
-          <Button as-child variant="secondary" class="w-5/6 md:w-1/4 font-bold">
-            <a
-              href="https://github.com/leoMirandaa/shadcn-vue-landing-page.git"
-              target="_blank"
-              >Secure Repository</a
-            >
-          </Button>
-        </div>
       </div>
 
       <div class="relative group mt-14">
